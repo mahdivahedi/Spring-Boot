@@ -1,0 +1,17 @@
+tacos/dto/Ingredient.class
+tacos/dto/Ingredient$Type.class
+tacos/TacoCloudApplication.class
+tacos/data/SimpleGenericDao.class
+tacos/web/DesignTacoController.class
+tacos/security/RegistrationForm.class
+tacos/web/OrderController.class
+tacos/data/UserRepository.class
+tacos/security/UserRepositoryUserDetailsService.class
+tacos/web/WebConfig.class
+tacos/security/SecurityConfig.class
+tacos/dto/Order.class
+tacos/data/HibernateConf.class
+tacos/dto/User.class
+tacos/dto/Taco.class
+tacos/data/IngredientRepository.class
+tacos/security/RegistrationController.class

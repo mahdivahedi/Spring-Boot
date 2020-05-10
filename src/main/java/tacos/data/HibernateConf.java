@@ -17,12 +17,12 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class HibernateConf {
 
-    @Bean
+    @Bean(name="entityManagerFactory")
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setPackagesToScan(
-                "tacos.dto","tacos");
+                "tacos.dto");
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
@@ -31,15 +31,15 @@ public class HibernateConf {
     @Bean
     public DataSource dataSource() {
         final BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setUrl("jdbc:h2:mem:db;DB_CLOSE_DELAY=-1");
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/aut?useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
 
         return dataSource;
     }
 
-    @Bean
+    @Bean(name = "transactionManager")
     public PlatformTransactionManager hibernateTransactionManager() {
         HibernateTransactionManager transactionManager
                 = new HibernateTransactionManager();
@@ -47,12 +47,12 @@ public class HibernateConf {
         return transactionManager;
     }
 
-    private final Properties hibernateProperties() {
+    private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty(
-                "hibernate.hbm2ddl.auto", "create-drop");
+                "spring.jpa.hibernate.ddl-auto", "create-drop");
         hibernateProperties.setProperty(
-                "hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+                "hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 
         return hibernateProperties;
     }

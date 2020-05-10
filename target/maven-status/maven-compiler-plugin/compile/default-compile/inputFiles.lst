@@ -1,0 +1,17 @@
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/data/HibernateConf.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/data/IngredientRepository.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/data/SimpleGenericDao.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/security/RegistrationForm.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/security/RegistrationController.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/data/UserRepository.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/HomeController.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/dto/Ingredient.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/TacoCloudApplication.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/dto/User.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/web/OrderController.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/security/UserRepositoryUserDetailsService.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/dto/Order.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/web/WebConfig.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/security/SecurityConfig.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/dto/Taco.java
+/home/mehdi/IdeaProjects/Spring-Boot/src/main/java/tacos/web/DesignTacoController.java

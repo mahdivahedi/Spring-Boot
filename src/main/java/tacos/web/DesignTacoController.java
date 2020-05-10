@@ -1,7 +1,6 @@
 package tacos.web;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
@@ -12,8 +11,8 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.Ingredient;
-import tacos.Ingredient.Type;
+import tacos.dto.Ingredient;
+import tacos.dto.Ingredient.Type;
 import tacos.data.IngredientRepository;
 import tacos.dto.Taco;
 
