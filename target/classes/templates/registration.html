@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title>Taco Cloud</title>
 </head>
 <body>
 <h1>Register</h1>
-<img th:src="@{/images/taco.png}" alt="no thing"/>
+<img th:src="@{/images/taco.png}" alt="no thing" src="/images/taco.png"/>
 <form method="POST" th:action="@{/register}" id="registerForm">
     <label for="username">Username: </label>
     <input type="text" name="username" id="username"/><br/>

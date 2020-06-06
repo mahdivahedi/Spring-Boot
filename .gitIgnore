@@ -46,6 +46,7 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
  .idea/modules.xml
  .idea/*.iml
+ .idea/*.xml
  .idea/modules
 # *.iml
 # *.ipr
