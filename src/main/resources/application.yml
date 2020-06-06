@@ -1,0 +1,41 @@
+spring:
+  thymeleaf:
+    cache: false
+    check-template: false
+  datasource:
+      url: jdbc:mysql://localhost:3306/aut?useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8091
+  ssl:
+    key-store: classpath:mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+
+logging:
+  file:
+    path: /var/logs/
+    name: TacoCloud.log
+  level:
+    root: WARN
+    org.springframework.security: DEBUG
+
+taco:
+  orders:
+    page-size: 20
+
+---
+spring:
+    profiles:
+      -prod
+logging:
+  level:
+    tacos: WARN

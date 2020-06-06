@@ -1,7 +1,6 @@
 package tacos.web;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
@@ -12,9 +11,9 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.Ingredient;
-import tacos.Ingredient.Type;
-import tacos.data.IngredientRepository;
+import tacos.data.TacoRepository;
+import tacos.dto.Ingredient;
+import tacos.dto.Ingredient.Type;
 import tacos.dto.Taco;
 
 import javax.validation.Valid;
@@ -25,12 +24,11 @@ import javax.validation.Valid;
 @RequestMapping("/design")
 public class DesignTacoController {
 
-    private final IngredientRepository ingredientRepo;
+    @Autowired
+    private TacoRepository tacoRepository;
 
     @Autowired
-    public DesignTacoController(IngredientRepository ingredientRepo) {
-        this.ingredientRepo = ingredientRepo;
-    }
+    public DesignTacoController() {}
 
     @GetMapping
     public String showDesignForm(Model model) {
@@ -48,8 +46,9 @@ public class DesignTacoController {
     public String processDesign(@Valid Taco design, Errors errors) {
         if (errors.hasErrors())
             return "design";
-        // Save the taco design...
-        // We'll do this in chapter 3
+
+        tacoRepository.save(design);
+
         log.info("Processing design: " + design);
         return "redirect:/orders/current";
     }

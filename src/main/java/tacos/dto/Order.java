@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name="Taco_Order")
+@Table(name="taco_Order")
 @Data
 public class Order implements Serializable {
 
@@ -27,6 +27,9 @@ public class Order implements Serializable {
 
     @NotBlank(message="Name is required")
     private String name;
+
+    @ManyToOne
+    private User user;
 
     @NotBlank(message="street is required")
     private String street;
@@ -42,7 +45,7 @@ public class Order implements Serializable {
 
     private String ccNumber;
 
-    @Pattern(regexp="^(0[1-9]|1[0-2])([\\/])([1-9][0-9])$", message="Must be formatted MM/YY")
+    @Pattern(regexp="^(0[1-9]|1[0-2])([/])([1-9][0-9])$", message="Must be formatted MM/YY")
     private String ccExpiration;
 
     @Digits(integer=3, fraction=0, message="Invalid CVV")

@@ -3,7 +3,6 @@ package tacos.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import tacos.Ingredient;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

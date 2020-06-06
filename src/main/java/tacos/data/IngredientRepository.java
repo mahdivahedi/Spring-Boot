@@ -1,14 +1,15 @@
 package tacos.data;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+import tacos.dto.Ingredient;
+
 import java.io.Serializable;
 import java.util.List;
 
-public interface IngredientRepository{
+@Transactional
+public interface IngredientRepository extends CrudRepository<Ingredient, Long> {
 
-    <E> List<E> findAll(Class<E> entityClass);
-
-    <E, K extends Serializable> E findOne(K id);
-
-    <E> boolean save(E entity);
+    Ingredient findIngredientById(String id);
 
 }
