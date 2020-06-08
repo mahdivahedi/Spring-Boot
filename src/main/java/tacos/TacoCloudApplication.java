@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@SpringBootApplication(exclude =  HibernateJpaAutoConfiguration.class)
+@SpringBootApplication
 public class TacoCloudApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
